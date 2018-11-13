@@ -12,7 +12,7 @@ have received a login slip from the instructor. Navigate to the URL your
 instructor provided in your browser and sign up for an account with your
 email address.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image30.png)
+![](media/image30.png)
 
 Once you are logged in, we can get started. Our CDH cluster is
 completely secured with Kerberos, so we’ll need to specify in our
@@ -25,7 +25,7 @@ enter the **principal** and **credentials** that are printed on your
 slip. Click Authenticate and you should get a confirmation that it was
 successful. Now you’re ready to work with the cluster\!
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image15.png)
+![](media/image15.png)
 
 Before we start working with data and writing code, let’s orient
 ourselves in the system. Click on **Projects** in the vertical menu on
@@ -48,7 +48,7 @@ how many you are taking up. You can hover over a bar to display their
 values, but by default it will always display how many resources you are
 currently using.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image65.png)
+![](media/image65.png)
 
 **Projects** are the main tool to organize and run code in CDSW. This is
 where we will be spending most of our time. Before we dive into that,
@@ -60,14 +60,14 @@ At the top of the page you’ll see the name of the user you logged in as,
 as well as a big **+** to the left of it. Click the **+** and select
 **Create Team**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image27.png)
+![](media/image27.png)
 
 Now enter the name of your team. Give it a unique name that will allow
 you to distinguish it from other people’s teams in the system, like
 “\<first\_name\>’s Avengers” or “\<initials\> Justice League”. Click
 **Create Team**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image61.png)
+![](media/image61.png)
 
 The next screen allows you to add people to collaborate with. You are
 really impressed with one of your colleague’s knowledge of data science,
@@ -76,7 +76,7 @@ challenges. Type “**t**” into the top box and then select the first
 option that pops up in the autocomplete: “**Tom Smith**”. After a second
 you should see Tom Smith added to your team.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image7.png)
+![](media/image7.png)
 
 In the row with Tom Smith’s name, click **Change.** This shows how you
 can modify what roles users have in your team. Some may be *viewers*,
@@ -87,7 +87,7 @@ full access to all projects in the team. Let’s leave Tom Smith’s role at
 contributor for now. This is also where you can edit or remove existing
 team members’ roles in the future.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image19.png)
+![](media/image19.png)
 
 Before we start working with projects, go back to the dashboard by
 clicking on **Projects**. In the top right corner, you should notice
@@ -97,7 +97,7 @@ We don’t have any projects yet, but this is how you can switch between
 different teams in the system and your list of projects will be
 displayed based that team.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image34.png)
+![](media/image34.png)
 
 ##   
 
@@ -110,7 +110,7 @@ Make sure you are on your dashboard, then you can either click the arrow
 in the top toolbar and click **Create Project**, or click the blue **New
 Project** button below your resource toolbar.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image50.png)
+![](media/image50.png)
 
 You should see a short form to fill out for your new project. First,
 select which account to place this project in. Let’s select **the team
@@ -128,7 +128,7 @@ project, upload local files from our laptop, or clone an existing github
 project. We’ll explore some of these other options in future exercises.
 When finished, click **Create Project**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image45.png)
+![](media/image45.png)
 
 After creating a project, you’ll be taken to the project dashboard. This
 provides a high-level overview of the project. At a glance, you’ll be
@@ -144,7 +144,7 @@ execute project, and *admin*, who has full access to the system. You’ll
 spend most of the time in your project working in the workbench, so
 click the blue **Open Workbench** button at the top of the page.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image33.png)
+![](media/image33.png)
 
 The workbench is broken into three panels. On the left is the list of
 *Files*, the middle panel is your *Editor*, and the right panel is your
@@ -163,7 +163,7 @@ this a little later): you can modify the base images CDSW provides and
 create larger instance sizes if needed. Select **Python 2**, **1 vCPU/2
 GiB**, and click **Launch Session**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image8.png)
+![](media/image8.png)
 
 On the back end, CDSW provisions out a Docker container from which to
 run all your code. This is isolated from other users in the system, so
@@ -176,7 +176,7 @@ out by typing the following and hitting enter:
 
 print "Hello World\!"
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image56.png)
+![](media/image56.png)
 
 CDSW executes your code in the session, and you’ll see the results
 displayed immediately. Our base engine is based off a Jupyter kernel, so
@@ -190,7 +190,7 @@ let’s just run our existing code in the session. To do that, you can
 either click the **Play** button on the top of the editor, or click
 **Run** and select **Run All**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image40.png)
+![](media/image40.png)
 
 Your code should run in just a few seconds. Notice that our code
 contains some visualizations and also demonstrates working with popular
@@ -200,7 +200,7 @@ ability to install additional dependencies as needed (more on this
 later). The goal here is to give Python users a familiar experience
 while connecting them to big data resources.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image48.png)
+![](media/image48.png)
 
 We are finished with this exercise, let’s just free up our resources as
 a last step. To do this, click the Stop button on the top of the
@@ -209,7 +209,7 @@ resources. Don’t worry, your code is still saved in your project and we
 also keep a history of all your past sessions, should you wish to
 revisit them.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image46.png)
+![](media/image46.png)
 
 ## Exercise 3: Creating a New Project from Github
 
@@ -219,9 +219,9 @@ to interact with the cluster. Navigate back to the main dashboard. If
 you’re still in the workbench for Exercise 2, click **Project** at the
 top of the page, and then Account.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image51.png)
+![](media/image51.png)
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image52.png)
+![](media/image52.png)
 
 We need to create a new project so Click **Create Project** like we did
 in Exercise 2. Put this project in your **Personal Account** instead of
@@ -232,7 +232,7 @@ URL:
 
 [<span class="underline">https://github.com/jordanvolz/BasketballStatsCDSW</span>](https://github.com/jordanvolz/BasketballStatsCDSW)
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image60.png)
+![](media/image60.png)
 
 Click **Create Project**. This will clone the repository and create a
 new CDSW project with the contents of that repo. You should see a page
@@ -240,7 +240,7 @@ that looks something like the following image. This project already has
 several scripts around data processing, data analytics, and machine
 learning that we can use in CDSW.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image49.png)
+![](media/image49.png)
 
 Before we get started in the workbench, let’s add a collaborator to the
 project. We didn’t put this project in a team, but we can still add
@@ -248,7 +248,7 @@ users to the project who we want to collaborate with. Click on **Team**
 on the left and then search for the user **Tom Smith.** Add him to the
 project, and you change his permission from ‘Viewer’ to ‘Admin’.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image18.png)
+![](media/image18.png)
 
 We can always ad-hoc add users to our personal projects. Your personal
 projects by default will contain you as the sole collaborator, so if you
@@ -296,7 +296,7 @@ spark.sql(s"Select name, zTot from $dbName.players where year=2017 limit
 You should see a small table produced, like below (note: the actual
 entries will differ):
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image21.png)
+![](media/image21.png)
 
 Now let’s look at the data analytics script. Click **analysis.py** to
 open the script in the editor. Again, change the first line in the
@@ -316,16 +316,16 @@ the name and rename it something more descriptive, like **“\<User
 Name\>’s Scala Session”,** then click **Done**. This should replace
 the name of your session.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image42.png)
+![](media/image42.png)
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image23.png)
+![](media/image23.png)
 
 Now click the **Sessions** drop down menu at the top of the Sessions
 panel. You’ll see an entry for your current session, as well as the
 option to create a new session. Click “New Session” Then create a
 **Python 2** session with **1 vCPU/2 GiB RAM**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image2.png)
+![](media/image2.png)
 
 Once the session has started, you can optionally rename it like we did
 with the Scala Session. This will help organize your sessions if you
@@ -363,7 +363,7 @@ code on your behalf. See the
 [<span class="underline">documentation</span>](https://www.cloudera.com/documentation/data-science-workbench/latest/topics/cdsw_using_git.html)
 for more details.)
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image74.png)
+![](media/image74.png)
 
 We’re done with this project, so let’s return to our dashboard
 (**Project** \> **Accounts**). If you neglected to close your sessions,
@@ -371,21 +371,21 @@ you’ll notice that the resource monitors now display how many resources
 you are using on the CDSW nodes, and your Exercise 3 project shows that
 2 sessions are running:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image41.png)
+![](media/image41.png)
 
 Also notice that since you are in your personal context, you only see
 the Exercise 3 project. You can switch to your team context via the
 dropdown in the top right to see that Exercise 2 is located in that team
 context.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image26.png)
+![](media/image26.png)
 
 Now let’s stop our sessions to free up resources for others. To do this,
 we don’t need to return to the project. Make sure you’re in your
 personal context and navigate to **Sessions** in the left vertical menu.
 Locate your two running sessions and click ‘Stop’.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image29.png)
+![](media/image29.png)
 
 Note that from the Sessions page we can view any of our past sessions by
 clicking the link.
@@ -410,17 +410,17 @@ called **“Exercise 4 - US Flight Analytics**” by the user **“admin”**
 and open it, or just navigate to this link:
 <span class="underline">[http://](http://cdsw.54.70.226.3.nip.io/admin/exercise-4-us-flight-analytics)[cdsw.34.219.208.168.nip.io](http://cdsw.54.70.226.3.nip.io/explore)[/admin/exercise-4-us-flight-analytics](http://cdsw.54.70.226.3.nip.io/admin/exercise-4-us-flight-analytics)</span>.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image58.png)
+![](media/image58.png)
 
 Click the **Fork** button in the top right corner of the project, then
 select which team to create the project under, such as the **team you
 created in Exercise 1**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image31.png)
+![](media/image31.png)
 
 New forked project:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image1.png)
+![](media/image1.png)
 
 This will copy the project into the new team and load the project
 dashboard. Click **Open** **Workbench,** select the
@@ -520,7 +520,7 @@ workbench and select **File** \> **New File**, and name the file
 
 Run the file in a python 2 session. Notice we get an error:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image68.png)
+![](media/image68.png)
 
 This error tells us that our container doesn’t have the
 [<span class="underline">plotly</span>](http://plot.ly) library. Plotly
@@ -536,7 +536,7 @@ list dependencies. We can install everything in requirements.txt via
 session and run that command, or run it in the interactive session by
 prepending a “\!” to it, i.e. “\!pip install -r requirements.txt”
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image16.png)
+![](media/image16.png)
 
 Be sure in the first line in the script to replace “\<Your User Name\>”
 with the name of your system user.
@@ -547,7 +547,7 @@ Now try to run your file again.
 
 You should now be able to produce an interactive graph, as below.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image14.png)
+![](media/image14.png)
 
 CDSW allows users to install and load libraries using methods they are
 already familiar with. Python users are likely familiar with tools such
@@ -616,7 +616,7 @@ output
 Open a **Python 2** session with **1 vCPU/2 GiB RAM** and run the code.
 You should get the following error:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image66.png)
+![](media/image66.png)
 
 Hopefully this error makes sense after Exercise 5. We need to first
 install the ta-lib library. As we did in exercise 5, you can create a
@@ -625,7 +625,7 @@ the name) or simply issue **\!pip install -r requirements.txt** or
 **\!pip install ta-lib** from the command line. Do one of those, and you
 should get an error with the following:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image13.png)
+![](media/image13.png)
 
 This error message is a little more mysterious, but a little
 troubleshooting reveals that there is an underlying C++ library that
@@ -649,7 +649,7 @@ now via **Projects** \> **Settings**. Then click **Engine**. Under
 Engine Image, click the drop down menu and select the Image for
 **TA-Lib**. At the bottom of the page, select **Save Environment**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image12.png)
+![](media/image12.png)
 
 You can now return to the workbench. Note that you’ll need to stop your
 old session and start a new one in order to refresh the engine. Also,
@@ -658,19 +658,19 @@ now different. There is also a **Configure** link here that will take
 you to the project settings if you want a quick way to change the engine
 image of your project.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image5.png)
+![](media/image5.png)
 
 Once you’ve done that (Note: the first time you use a new engine in
 CDSW, CDSW needs to download it from the docker repository. Docker
 images can be GBs in size, so it can take a few minutes to start your
 first session with an image), try to **\!pip install ta-lib** again.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image70.png)
+![](media/image70.png)
 
 This time we are in luck and ta-lib is installed. Now, run the code to
 see if it works. This time the code completes successfully:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image24.png)
+![](media/image24.png)
 
 This example demonstrates how users can satisfy advanced dependency
 requirements via extended engine images and importing them into their
@@ -695,14 +695,14 @@ you can decide whether you want to make the links available to anyone
 with the links (aka anonymous users), force visitors to be logged in to
 view, or specific users/teams who can access the link.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image10.png)
+![](media/image10.png)
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image67.png)
+![](media/image67.png)
 
 When accessing the link, authorized users will be able to see a static
 html view of the session.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image75.png)
+![](media/image75.png)
 
 Note that this functionality is not limited to currently running
 sessions. You may also generate a share link from old session by opening
@@ -722,7 +722,7 @@ Open your project for **Exercise 3**. At the top of the dashboard, the
 Jobs section notifies us that we don’t have any jobs for this project\!
 Let’s fix that by click on **Create New Job**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image57.png)
+![](media/image57.png)
 
 CDSW will pop up a form to fill out to tell it what you want to run and
 how you want it to run. This is very similar to creating an interactive
@@ -740,7 +740,7 @@ may do things like specify Environment Variables for the project,
 specify job report recipients, and modify the timeout limit. Scroll to
 the bottom and click **Create Job**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image72.png)
+![](media/image72.png)
 
 Now we have 1 job\! Before we run it, let’s connect it to a second job.
 Click **New Job** in the top right corner and let’s create a second job.
@@ -749,7 +749,7 @@ will schedule it to be **dependent** on the first job we created. Your
 job should look something like below. When finished, click **Create
 Job**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image55.png)
+![](media/image55.png)
 
 Since we created a dependent job, we notice that our jobs are connected
 in a chain. The chain doesn’t have to be 1-1. We could, for example,
@@ -758,19 +758,19 @@ with different actions. If you don’t want to wait for the scheduled job,
 you can run your jobs ad-hoc from the jobs page. Press Run next to the
 job **“\<Your User Name\> Data Processing**”
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image4.png)
+![](media/image4.png)
 
 It should take approximately 2-3 minutes to run through both jobs. When
 they are finished, click on the **Data Analysis** job to drill into the
 details. As your job runs, you’ll generate a graph that details the
 duration of each run, as well as whether or not it was successful.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image3.png)
+![](media/image3.png)
 
 We can get a table view of this via the History tab, and for any run we
 can drill down into it to see the output of the job.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image6.png)
+![](media/image6.png)
 
 The other two tabs allow us to view the job dependency graph, as well as
 updating the settings for the job.
@@ -797,7 +797,7 @@ After the project has been cloned, navigate to the workbench and launch
 a **Python 2** session with **1 vCPU / 2 GiB RAM**. Open up a Terminal
 window and run the **setup.sh script**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image59.png)
+![](media/image59.png)
 
 This will perform a few preliminary actions that will make our project
 ready to use. Click on **dsfortelco\_interactive.py** and run this file.
@@ -806,7 +806,7 @@ predict customer churn. This file takes you through a standard
 explorative practice including data visualization and feature selection.
 Feel free to read through it if you are interested.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image9.png)
+![](media/image9.png)
 
 Next, we want to start creating experiments. Experiments allow you to
 start creating versioning runs of your project and tracking metrics,
@@ -817,7 +817,7 @@ it in the editor. This is a very similar file to the one we just ran,
 but we’ve modified it to run as an experiment. Scroll down halfway to
 the bottom and you’ll notice some changes that we have brought in.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image38.png)
+![](media/image38.png)
 
 Experiments take arguments as an input which you can access in your code
 (via sys.argv). This allows you to reuse the same piece of code and plug
@@ -840,13 +840,13 @@ To start running experiments, click **Run \> Run Experiment.** This pops
 up a window that allows you to specify the environment in which to run
 your experiment.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image73.png)
+![](media/image73.png)
 
 The file is auto-populated with the open file in the editor. Enter “**10
 10 gini**” as your arguments for the run, and select a small python 2
 engine to run it in. Then click **Launch**.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image39.png)
+![](media/image39.png)
 
 You can now view the experiment by navigating back to the project
 overview and clicking on **Experiments**. This takes you to a list of
@@ -855,7 +855,7 @@ the list, along with the metrics that you are tracking (Note that you
 can select which metrics to display via the dropdown menu on the top
 right).
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image22.png)
+![](media/image22.png)
 
 We want to compare our pyspark model to our sci-kit learn model, so
 let’s generate a new experiment. We can actually kick off a new
@@ -867,7 +867,7 @@ interesting for our example is the area under the ROC, and we can
 quickly discern that our pyspark model does a little better than the
 sci-kit learn model.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image35.png)
+![](media/image35.png)
 
 We can drill down into any model by clicking on the Run number in the
 leftmost column. Click on the pyspark model run to see it’s details. The
@@ -881,13 +881,13 @@ out as a model (which we’ll learn how to do in the next section\!). If
 interested, you can also view the console output of the experiment, or
 the build output.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image17.png)
+![](media/image17.png)
 
 Click the spark\_rf.tar files and select **Save to Project.** Navigate
 back to the project’s main menu and notice that the spark\_rf.tar file
 is now in your project files.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image43.png)
+![](media/image43.png)
 
 ## Exercise 10: Model APIs
 
@@ -899,13 +899,13 @@ created from the **dsfortelco\_sklearn\_exp.py** script) and defines a
 predict function that takes a feature as input and runs it through the
 model function.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image47.png)
+![](media/image47.png)
 
 This is a simple function, but it will do just fine to illustrate the
 capabilities of the Models API. Navigate back to the project overview
 page and click “Create a new model”.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image54.png)
+![](media/image54.png)
 
 On the new page that pops up, you’ll give the model a name and
 description, then define the build. For the build, you give it a script
@@ -918,14 +918,14 @@ number of replicas. Replicas allow you to create multiple copies of the
 model, so that if one should fail, the others will continue to serve
 results.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image53.png)
+![](media/image53.png)
 
 When finished, click **Deploy Model** at the bottom of the page. You’ll
 now be at the Models dashboard. It should take a few minutes for CDSW to
 build the environment for your model, but when finished, you’ll notice
 that the model’s status is “deployed”.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image62.png)
+![](media/image62.png)
 
 The dashboard gives you an overview of models you have in your project
 and their status, as well as quick way to start/stop models or deploy
@@ -938,7 +938,7 @@ resources, etc. On the bottom, you have a quick box to test the model
 itself. Feel free to modify the input values and then click **Test**.
 Below, it will display the output of the model (0 or 1 in this case).
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image69.png)
+![](media/image69.png)
 
 Typically, you’d utilize the model in an application that would use the
 API to generate real-time predictions. The top of the page provides a
@@ -946,7 +946,7 @@ few examples of working with the API, via shell, python, and R. Copy the
 shell command, open a terminal on your laptop, and run the curl command.
 You should get back a JSON result like the following:
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image36.png)
+![](media/image36.png)
 
 The next two tabs in your model keep track of deployments and builds.
 *Builds* are needed anytime a physical change is made to your model.
@@ -961,13 +961,13 @@ consequence. Instead of wondering how to get back your old model, you
 can simply navigate to the deployments tab and re-deploy an old version.
 You can also create a new build at any time as well.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image11.png)
+![](media/image11.png)
 
 The *Monitoring* tab keeps track of the currently deployed model and
 bubbles up some statistics about how it’s being used. Here you’ll be
 able to see how it’s handling various requests that come in.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image25.png)
+![](media/image25.png)
 
 Feel free to play around with the model deployment feature. You may also
 want to try building a model for the pyspark model we created in the
@@ -1057,25 +1057,25 @@ them access to the administrative portal. The *Overview* tab shows
 high-level information about the deployment, such as total number of
 users and system resources.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image28.png)
+![](media/image28.png)
 
 The Users tab gives you some stats on how users are using the system and
 allows you to do user administrative tasks as well, such as disabling
 users.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image37.png)
+![](media/image37.png)
 
 The Activity tab shows a history of all the running containers in the
 system (interactive sessions, jobs, and experiments). You can graph the
 usage of system resources over a time frame as well. This allows
 administrators to easily see if they are reach capacity at peak hours.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image63.png)
+![](media/image63.png)
 
 The *Models* tab shows all models that are running in the system and the
 amount of resources they are taking up.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image64.png)
+![](media/image64.png)
 
 The *Engines* tab allows administrators to define the engine sizes
 available to users. They’ll also be able to whitelist extended custom
@@ -1083,7 +1083,7 @@ engines available (like we saw in our ta-lib example), as well as
 defining common environment variables or mount points that should be
 available in all projects.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image32.png)
+![](media/image32.png)
 
 The *Security* tab is where admins can configure LDAP/AD/SSO connections
 for users, and the *License* tab is where admins upload your CDSW
@@ -1093,7 +1093,7 @@ Lastly, in *Settings*, administrators can define custom templates to be
 made available to users, as well as configuring an SMTP server to use
 for email.
 
-![](C:\\Users\\fabio.ghirardello\\Desktop/media/image71.png)
+![](media/image71.png)
 
 ##   
 Appendix C: Web UIs/Shiny Apps
