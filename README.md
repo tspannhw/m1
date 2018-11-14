@@ -461,7 +461,7 @@ the visibility. Select “Blank” for the initialization. Open the
 workbench and select **File** \> **New File**, and name the file
 **plotly_test.py**.
 
-```
+```python
 dbName = "<your user name>"
 
 from plotly.graph_objs import Scatter
@@ -567,7 +567,8 @@ documentation contains a [<span class="underline">few python
 examples</span>](https://mrjbq7.github.io/ta-lib/), let’s see if we can
 get them to work. Create a new file, called **“ta-lib\_test.py”** and
 past the following into it:
-```
+
+```python
 import numpy 
 import talib
 close = numpy.random.random(100) 
