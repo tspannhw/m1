@@ -1,8 +1,9 @@
-## Exercise Manual
+# Exercise Manual
 
 Nov 8<sup>th</sup>, 2018 Created by Sandy Su
 
 Version 1 Systems Engineer @ Cloudera
+
 
 ## Exercise 1: Access & Team Management
 
@@ -99,8 +100,6 @@ displayed based that team.
 
 ![](media/image34.png)
 
-##   
-
 ## Exercise 2: Creating a New Project from Scratch
 
 Now we are ready to create a project\! *Projects* is where you will
@@ -174,7 +173,9 @@ a few seconds for common engine types. After that, the console will have
 a green bar at the bottom, which means it is ready to use. Let’s test it
 out by typing the following and hitting enter:
 
-print "Hello World\!"
+```
+print "Hello World!"
+```
 
 ![](media/image56.png)
 
@@ -228,9 +229,7 @@ in Exercise 2. Put this project in your **Personal Account** instead of
 your team account, Give the project a name like **“Exercise 3”**, make
 it a **Private** project and initialize the project with **Git** by
 using the following
-URL:
-
-[<span class="underline">https://github.com/jordanvolz/BasketballStatsCDSW</span>](https://github.com/jordanvolz/BasketballStatsCDSW)
+URL: [<span class="underline">https://github.com/jordanvolz/BasketballStatsCDSW</span>](https://github.com/jordanvolz/BasketballStatsCDSW)
 
 ![](media/image60.png)
 
@@ -289,12 +288,10 @@ file).
 The script will probably take \~1 min to run. When it is finished, let’s
 check that our tables were created correctly by running the following
 command:
-
-spark.sql(s"Select name, zTot from $dbName.players where year=2017 limit
-10 ").show
-
-You should see a small table produced, like below (note: the actual
-entries will differ):
+```
+spark.sql(s"Select name, zTot from $dbName.players where year=2017 limit 10").show
+```
+You should see a small table produced, like below (note: the actual entries will differ):
 
 ![](media/image21.png)
 
@@ -303,7 +300,7 @@ open the script in the editor. Again, change the first line in the
 script to replace “\<Your User Name\>” with the name of your system
 user.
 
-**dbName = "spiderman"**
+**dbName = "< YOUR USER NAME >"**
 
 We have a python script, but a scala session is running. Clearly, we
 can’t run python code in a Scala kernel. We’ll need to create a new
@@ -446,8 +443,6 @@ out what is needed for the code to successfully run. In CDSW, the
 project owner can work out the dependencies and other users can Fork the
 work and not have to worry about any of the messy setup.
 
-##   
-
 ## Exercise 5: Customizing Projects via Installing Libraries Locally
 
 We’re now experts at understanding how to create and share projects, as
@@ -464,59 +459,43 @@ Make sure all your current sessions are closed, and create a new project
 entitled “Exercise 5”. You can decide which team to place it under and
 the visibility. Select “Blank” for the initialization. Open the
 workbench and select **File** \> **New File**, and name the file
-**plotly\_test.py**.
+**plotly_test.py**.
 
-> dbName = "\<your user name\>"
-> 
-> from plotly.graph\_objs import Scatter
-> 
-> from plotly.offline import plot
-> 
-> from pyspark.sql import SparkSession
-> 
-> from IPython.display import HTML
-> 
-> spark = SparkSession.builder \\
-> 
-> .appName("%s basketball analysis" %(dbName)) \\
-> 
-> .getOrCreate()
-> 
-> spark
-> 
-> \#\# Set up pandas dataframe
-> 
-> pdPlayers = spark.sql("SELECT \* from %s.players"
-> %(dbName)).toPandas()
-> 
-> spark.stop
-> 
-> points={ 'data' : (\[{
-> 
-> "x": pdPlayers.age,
-> 
-> "y": pdPlayers.PTS,
-> 
-> "mode" : 'markers',
-> 
-> "text" : pdPlayers.name,
-> 
-> }\]),
-> 
-> 'layout': {
-> 
-> 'xaxis': {'title': 'Age'},
-> 
-> 'yaxis': {'title': "Points"}
-> 
-> }
-> 
-> }
-> 
-> plot(points,filename="/cdn/%s-bball-plot.html" %(dbName))
-> 
-> HTML("\<iframe width=600px height=600px src=%s-bball-plot.html /\>"
-> %(dbName))
+```
+dbName = "<your user name>"
+
+from plotly.graph_objs import Scatter
+from plotly.offline import plot
+from pyspark.sql import SparkSession
+from IPython.display import HTML
+
+spark = SparkSession.builder \
+      .appName("%s basketball analysis" %(dbName)) \
+      .getOrCreate()
+
+spark
+
+## Set up pandas dataframe
+pdPlayers = spark.sql("SELECT * from %s.players" %(dbName)).toPandas()
+
+spark.stop
+
+points={ 'data' : ([{
+    "x": pdPlayers.age,
+    "y": pdPlayers.PTS,
+    "mode" : 'markers',
+    "text" : pdPlayers.name, 
+}]),
+  'layout': {
+      'xaxis': {'title': 'Age'},
+      'yaxis': {'title': "Points"}
+    }
+}
+
+plot(points,filename="/cdn/%s-bball-plot.html" %(dbName))
+
+HTML("<iframe width=600px height=600px src=%s-bball-plot.html />" %(dbName))
+```
 
 Run the file in a python 2 session. Notice we get an error:
 
@@ -541,7 +520,7 @@ prepending a “\!” to it, i.e. “\!pip install -r requirements.txt”
 Be sure in the first line in the script to replace “\<Your User Name\>”
 with the name of your system user.
 
-**dbName = "spiderman"**
+**dbName = " < YOUR USER NAME >"**
 
 Now try to run your file again.
 
@@ -570,8 +549,8 @@ when they need them. In the next section, we’ll explore a different
 method of customizing projects which can be useful when your
 dependencies exist outside of pip/conda/cran/jar files.
 
-##   
-Exercise 6: Customizing Projects via Changing Project Engines
+
+## Exercise 6: Customizing Projects via Changing Project Engines
 
 In this exercise, we’ll look at working with libraries that have
 advanced dependencies.
@@ -588,30 +567,20 @@ documentation contains a [<span class="underline">few python
 examples</span>](https://mrjbq7.github.io/ta-lib/), let’s see if we can
 get them to work. Create a new file, called **“ta-lib\_test.py”** and
 past the following into it:
-
-import numpy
-
+```
+import numpy 
 import talib
-
-close = numpy.random.random(100)
-
+close = numpy.random.random(100) 
 output = talib.SMA(close)
-
 output
-
-from talib import MA\_Type
-
-upper, middle, lower = talib.BBANDS(close, matype=MA\_Type.T3)
-
+from talib import MA_Type
+upper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3) 
 upper
-
 middle
-
 lower
-
 output = talib.MOM(close, timeperiod=5)
-
 output
+```
 
 Open a **Python 2** session with **1 vCPU/2 GiB RAM** and run the code.
 You should get the following error:
@@ -676,10 +645,7 @@ This example demonstrates how users can satisfy advanced dependency
 requirements via extended engine images and importing them into their
 projects.
 
-##   
-
-##   
-Exercise 7: Sharing Results
+## Exercise 7: Sharing Results
 
 We’re now experts at customizing our projects so that we can work with
 precisely the tools we need. There’s no barriers now to doing great work
@@ -707,8 +673,6 @@ html view of the session.
 Note that this functionality is not limited to currently running
 sessions. You may also generate a share link from old session by opening
 them from the Sessions view and following the same process.
-
-##   
 
 ## Exercise 8: Automation via Jobs
 
@@ -783,8 +747,8 @@ example, you may have an ETL pipeline that ingests data into the cluster
 and then runs a job in CDSW to kick off batch scoring of the new data
 set with an existing model.
 
-##   
-Exercise 9: Experiments (CDSW 1.4+ Only)
+
+## Exercise 9: Experiments (CDSW 1.4+ Only)
 
 If you’re using CDSW v1.4 or above, you’ll have access to the new
 features *Experiments* and *Models*. In this exercise, we’ll look at the
@@ -889,6 +853,7 @@ is now in your project files.
 
 ![](media/image43.png)
 
+
 ## Exercise 10: Model APIs
 
 The last exercise we’ll look at is using the Models API to host a model
@@ -984,45 +949,45 @@ in the Appendices. Let us know if you have any questions.
 
 1)  > **Intro to Spark**:
     > [<span class="underline">https://github.com/jordanvolz/Intro-to-Spark</span>](https://github.com/jordanvolz/Intro-to-Spark)  
-    > For those looking to get into distributed processing, Apache Spark
-    > is the go-to tool in the CDH stack. Learning spark is far outside
-    > the scope of this tutorial, but we have a gentle introduction on
-    > github that was actually designed to be run in CDSW. Feel free to
-    > create a project with it and explore if if you want to learn a
-    > little bit more about how Spark can be leveraged with CDSW. Note
-    > that the cluster we’ve provided doesn’t have all CDH components
-    > installed and not all the subsections of this project will be able
-    > to complete. Contact the instructor if you have issues with
-    > anything.
+
+For those looking to get into distributed processing, Apache Spark
+is the go-to tool in the CDH stack. Learning spark is far outside
+the scope of this tutorial, but we have a gentle introduction on
+github that was actually designed to be run in CDSW. Feel free to
+create a project with it and explore if if you want to learn a
+little bit more about how Spark can be leveraged with CDSW. Note
+that the cluster we’ve provided doesn’t have all CDH components
+installed and not all the subsections of this project will be able
+to complete. Contact the instructor if you have issues with
+anything.
 
 2)  > **DS for Telco**:
     > [<span class="underline">https://drive.google.com/file/d/0B0we1KVH\_icsODhIc0tySjdYelk/view?usp=sharing</span>](https://drive.google.com/file/d/0B0we1KVH_icsODhIc0tySjdYelk/view?usp=sharing)
 
-> This is the project the instructor went through in his quick demo.
-> This is a good example of using Spark for a quick DS workflow,
-> including feature selection, featuring engineering, modeling, and
-> scoring. Tip: Download the zip, upload it to a new project, and then
-> unzip the file from within the CDSW terminal.
+This is the project the instructor went through in his quick demo.
+This is a good example of using Spark for a quick DS workflow,
+including feature selection, featuring engineering, modeling, and
+scoring. Tip: Download the zip, upload it to a new project, and then
+unzip the file from within the CDSW terminal.
 
 3)  > **Tensorflow**:
     > [<span class="underline">http://cdsw.jvolz-cloudera.com/jordan/tensorflow-tutorial</span>](http://cdsw.jvolz-cloudera.com/jordan/tensorflow-tutorial)
 
-> Tensorflow is a very popular library. This is a canonical example of
-> using tensorflow to learn how to classify letters via handwriting
-> samples. We have an existing project on the cluster, simple fork it
-> and run the python script in a python session.
+Tensorflow is a very popular library. This is a canonical example of
+using tensorflow to learn how to classify letters via handwriting
+samples. We have an existing project on the cluster, simple fork it
+and run the python script in a python session.
 
 4)  > **BigDL**:
     > [<span class="underline">https://drive.google.com/file/d/0B0we1KVH\_icsalBwbzZTZ1gwQVk/view?usp=sharing</span>](https://drive.google.com/file/d/0B0we1KVH_icsalBwbzZTZ1gwQVk/view?usp=sharing)  
-    > BigDL is a new deep learning framework spearheaded by Intel that
-    > runs on Spark and is designed to utilize common CPU instead of the
-    > more expensive GPU. We have a project collected in a zip jar. You
-    > can upload it to a project and play with it. It is based on the
-    > following blog post:
-    > https://blog.cloudera.com/blog/2017/04/deep-learning-frameworks-on-cdh-and-cloudera-data-science-workbench/
 
-##   
-Appendix A: Resources/Links 
+BigDL is a new deep learning framework spearheaded by Intel that
+runs on Spark and is designed to utilize common CPU instead of the
+more expensive GPU. We have a project collected in a zip jar. You
+can upload it to a project and play with it. It is based on the
+following [<span class="underline">blog post ](https://blog.cloudera.com/blog/2017/04/deep-learning-frameworks-on-cdh-and-cloudera-data-science-workbench/ ).
+
+## Appendix A: Resources/Links 
 
 Here are some resources and links that may be useful as you explore
 CDSW:
@@ -1044,8 +1009,7 @@ CDSW:
     > [<span class="underline">https://www.cloudera.com/products/fast-forward-labs-research.html</span>](https://www.cloudera.com/products/fast-forward-labs-research.html),
     > [<span class="underline">https://www.cloudera.com/more/services-and-support/fast-forward-labs.html</span>](https://www.cloudera.com/more/services-and-support/fast-forward-labs.html)
 
-##   
-Appendix B: Admin Stuff
+## Appendix B: Admin Stuff
 
 You may have noticed that you don’t have administrator access to the lab
 environment. We did this to try to ensure a stable environment, but
@@ -1095,8 +1059,7 @@ for email.
 
 ![](media/image71.png)
 
-##   
-Appendix C: Web UIs/Shiny Apps
+## Appendix C: Web UIs/Shiny Apps
 
 Work in Progress.
 
